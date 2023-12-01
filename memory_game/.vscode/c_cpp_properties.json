@@ -1,0 +1,62 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/joao99sb/code/embedded_system/arduino/memory_game/include",
+                "/home/joao99sb/code/embedded_system/arduino/memory_game/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/EEPROM/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/Optiboot_flasher/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI1/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/SoftwareSerial/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
+                "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire1/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/joao99sb/code/embedded_system/arduino/memory_game/include",
+                    "/home/joao99sb/code/embedded_system/arduino/memory_game/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/EEPROM/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/Optiboot_flasher/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI1/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/SoftwareSerial/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
+                    "/home/joao99sb/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire1/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60111",
+                "ARDUINO_AVR_ATmega328P",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++17",
+            "compilerPath": "/home/joao99sb/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
