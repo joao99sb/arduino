@@ -1,0 +1,1 @@
+avr-gcc -mmcu=atmega328p -Os CMakeFiles/netflix_test.elf.dir/src/Array.c.o CMakeFiles/netflix_test.elf.dir/src/main.c.o -o netflix_test.elf 
