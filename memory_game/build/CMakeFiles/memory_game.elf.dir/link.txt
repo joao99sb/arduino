@@ -1,1 +1,0 @@
-avr-gcc -mmcu=atmega328p -Os CMakeFiles/memory_game.elf.dir/src/Array.c.o CMakeFiles/memory_game.elf.dir/src/core.c.o CMakeFiles/memory_game.elf.dir/src/main.c.o -o memory_game.elf 

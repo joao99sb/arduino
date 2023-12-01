@@ -1,5 +1,0 @@
-/home/joao99sb/code/embedded_system/arduino/memory_game/build/CMakeFiles/memory_game.elf.dir
-/home/joao99sb/code/embedded_system/arduino/memory_game/build/CMakeFiles/upload.dir
-/home/joao99sb/code/embedded_system/arduino/memory_game/build/CMakeFiles/make.dir
-/home/joao99sb/code/embedded_system/arduino/memory_game/build/CMakeFiles/edit_cache.dir
-/home/joao99sb/code/embedded_system/arduino/memory_game/build/CMakeFiles/rebuild_cache.dir
