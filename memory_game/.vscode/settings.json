@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "core.h": "c",
+    "array.h": "c",
+    "*.tcc": "c",
+    "array": "c",
+    "algorithm": "c",
+    "random": "c",
+    "numeric": "c",
+    "charconv": "c",
+    "chrono": "c",
+    "optional": "c",
+    "format": "c",
+    "ratio": "c",
+    "system_error": "c",
+    "functional": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c"
+  }
+}

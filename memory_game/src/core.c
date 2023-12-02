@@ -24,3 +24,8 @@ void setPin(volatile u8 *REG_PORT, int PIN, int bit)
     *REG_PORT &= ~(1 << PIN);
   }
 }
+
+u8 getPinState(volatile u8 *REG_PIN, int PIN)
+{
+  return *REG_PIN & (1 << PIN);
+}

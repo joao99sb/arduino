@@ -32,7 +32,7 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 
 # Configuração para upload usando avrdude (ajuste a porta de acordo)
 add_custom_target(upload
-    COMMAND sudo avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyUSB1 -b115200 -U flash:w:${PROJECT_NAME}.hex
+    COMMAND sudo avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyUSB0 -b115200 -U flash:w:${PROJECT_NAME}.hex
     DEPENDS ${PROJECT_NAME}.elf
     COMMENT "Uploading to Arduino")
 

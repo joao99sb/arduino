@@ -11,4 +11,4 @@ subprocess.run(["cmake", ".."])
 
 subprocess.run(["make"])
 
-print("Configuração concluída. Agora você pode compilar o projeto.")
+print("Configuração concluída.")

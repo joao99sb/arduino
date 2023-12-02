@@ -15,7 +15,7 @@ void verifyArray(Array arr);
 Array createArray(int size);
 
 // display
-void displayArrayElements(Array *arr);
+// void displayArrayElements(Array *arr);
 
 void destroyArray(Array *arr);
 
