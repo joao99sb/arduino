@@ -11,6 +11,9 @@ typedef unsigned int u8 __attribute__((__mode__(__QI__)));
 #define PIND_OFFSET (0x09)
 #define PIND ((volatile u8 *)PIND_OFFSET + PERIPH_BASE)
 
+#define TCNT0_OFFSET 0x26
+#define TCNT0 ((volatile u8 *)TCNT0_OFFSET + PERIPH_BASE)
+
 #define PIN1 1
 #define PIN2 2
 #define PIN3 3
@@ -25,8 +28,8 @@ typedef unsigned int u8 __attribute__((__mode__(__QI__)));
 #define INPUT 1
 #define OUTPUT 0
 
-#define TCNT0_OFFSET 0x26
-#define TCNT0 ((volatile u8 *)TCNT0_OFFSET + PERIPH_BASE)
+#define TRUE 1
+#define FALSE 0
 
 void pinMode(volatile u8 *REG_DDRx, int PORTx, int MODE);
 

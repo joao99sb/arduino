@@ -17,6 +17,10 @@ Array createArray(int size)
   arr.A = (int *)malloc(size * sizeof(int));
   arr.length = 0;
 
+  arr.pin_level = 0;
+  arr.current_pin = 0;
+  arr.next = 1;
+
   return arr;
 }
 
