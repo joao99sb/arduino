@@ -8,7 +8,8 @@
 
 #define INPUT_MODE 0
 #define OUTPUT_MODE 1
-#define LEVEL_SIZE 5
+#define END_GAME_MODE 2
+#define LEVEL_SIZE 10
 
 int game_mode = OUTPUT_MODE;
 
@@ -164,7 +165,7 @@ int hasBeenPressed()
          getPinState(PIND, PIN7);
 };
 
-int level1[LEVEL_SIZE] = {PIN4, PIN6, PIN7, PIN4, PIN5};
+int level1[LEVEL_SIZE] = {PIN5, PIN7, PIN6, PIN4, PIN7, PIN5, PIN6, PIN4, PIN4, PIN5};
 int main(void)
 {
   Array pin_array = createArray(10);
@@ -205,8 +206,8 @@ int main(void)
         if (pin_array.current_pin + 1 == LEVEL_SIZE)
         {
           _delay_ms(500);
-          winAnimation();
-          break;
+          change_game_mode(END_GAME_MODE);
+          continue;
         }
 
         if (pin_array.length == pin_array.current_pin + 1)
@@ -220,7 +221,7 @@ int main(void)
         else
         {
           pin_array.current_pin++;
-          _delay_ms(500);
+          _delay_ms(300);
         }
       }
       else if (hasBeenPressed() && !getPinState(PIND, pin_array.A[pin_array.current_pin]))
@@ -236,6 +237,18 @@ int main(void)
       }
 
       // change_game_mode(OUTPUT_MODE);
+    }
+    else if (game_mode == END_GAME_MODE)
+    {
+      winAnimation();
+      pin_array.pin_level = 0;
+      pin_array.current_pin = 0;
+      pin_array.next = 0;
+      // pin_array.A = {0};
+      change_game_mode(OUTPUT_MODE);
+      // destruir o final do array
+      destroyArray(&pin_array);
+      _delay_ms(1000);
     }
 
     // set port
