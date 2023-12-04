@@ -165,6 +165,14 @@ int hasBeenPressed()
          getPinState(PIND, PIN7);
 };
 
+int gameAnnihilator(Array *pin_array)
+{
+  pin_array->pin_level = 0;
+  pin_array->current_pin = 0;
+  pin_array->next = 0;
+  destroyArray(&pin_array);
+}
+
 int level1[LEVEL_SIZE] = {PIN5, PIN7, PIN6, PIN4, PIN7, PIN5, PIN6, PIN4, PIN4, PIN5};
 int main(void)
 {
@@ -227,13 +235,8 @@ int main(void)
       else if (hasBeenPressed() && !getPinState(PIND, pin_array.A[pin_array.current_pin]))
       {
         loseAnimation(&pin_array);
-        pin_array.pin_level = 0;
-        pin_array.current_pin = 0;
-        pin_array.next = 0;
-        // pin_array.A = {0};
+        gameAnnihilator(&pin_array);
         change_game_mode(OUTPUT_MODE);
-        // destruir o final do array
-        destroyArray(&pin_array);
       }
 
       // change_game_mode(OUTPUT_MODE);
@@ -241,13 +244,9 @@ int main(void)
     else if (game_mode == END_GAME_MODE)
     {
       winAnimation();
-      pin_array.pin_level = 0;
-      pin_array.current_pin = 0;
-      pin_array.next = 0;
-      // pin_array.A = {0};
+      gameAnnihilator(&pin_array);
       change_game_mode(OUTPUT_MODE);
-      // destruir o final do array
-      destroyArray(&pin_array);
+
       _delay_ms(1000);
     }
 
