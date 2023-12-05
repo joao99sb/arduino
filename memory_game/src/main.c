@@ -1,4 +1,3 @@
-#include <util/delay.h>
 #include "core.h"
 #include "Array.h"
 
@@ -55,13 +54,13 @@ void loseAnimation(Array *pin_array)
     setPin(REG_PORTD, PIN5, 1);
     setPin(REG_PORTD, PIN6, 1);
     setPin(REG_PORTD, PIN7, 1);
-    _delay_ms(200);
+    delay(200);
 
     setPin(REG_PORTD, PIN4, 0);
     setPin(REG_PORTD, PIN5, 0);
     setPin(REG_PORTD, PIN6, 0);
     setPin(REG_PORTD, PIN7, 0);
-    _delay_ms(200);
+    delay(200);
   }
 }
 void winAnimation()
@@ -76,80 +75,80 @@ void winAnimation()
   setPin(REG_PORTD, PIN5, 1);
   setPin(REG_PORTD, PIN6, 1);
   setPin(REG_PORTD, PIN7, 1);
-  _delay_ms(500);
+  delay(500);
 
   setPin(REG_PORTD, PIN4, 0);
   setPin(REG_PORTD, PIN5, 0);
   setPin(REG_PORTD, PIN6, 0);
   setPin(REG_PORTD, PIN7, 0);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN4, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN4, 0);
   setPin(REG_PORTD, PIN5, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN5, 0);
   setPin(REG_PORTD, PIN6, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN6, 0);
 
   setPin(REG_PORTD, PIN7, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN7, 0);
 
-  _delay_ms(200);
+  delay(200);
 
   setPin(REG_PORTD, PIN4, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN4, 0);
   setPin(REG_PORTD, PIN5, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN5, 0);
   setPin(REG_PORTD, PIN6, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN6, 0);
 
   setPin(REG_PORTD, PIN7, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN7, 0);
 
-  _delay_ms(200);
+  delay(200);
 
   setPin(REG_PORTD, PIN7, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN7, 0);
   setPin(REG_PORTD, PIN6, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN6, 0);
   setPin(REG_PORTD, PIN5, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN5, 0);
 
   setPin(REG_PORTD, PIN4, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN4, 0);
 
-  _delay_ms(200);
+  delay(200);
 
   setPin(REG_PORTD, PIN7, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN7, 0);
   setPin(REG_PORTD, PIN6, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN6, 0);
   setPin(REG_PORTD, PIN5, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN5, 0);
 
   setPin(REG_PORTD, PIN4, 1);
-  _delay_ms(200);
+  delay(200);
   setPin(REG_PORTD, PIN4, 0);
 
   setPin(REG_PORTD, PIN4, 1);
   setPin(REG_PORTD, PIN5, 1);
   setPin(REG_PORTD, PIN6, 1);
   setPin(REG_PORTD, PIN7, 1);
-  _delay_ms(500);
+  delay(500);
 
   setPin(REG_PORTD, PIN4, 0);
   setPin(REG_PORTD, PIN5, 0);
@@ -198,9 +197,9 @@ int main(void)
       {
         setPin(REG_PORTD, pin_array.A[i], 1);
 
-        _delay_ms(200);
+        delay(200);
         setPin(REG_PORTD, pin_array.A[i], 0);
-        _delay_ms(200);
+        delay(200);
       }
       change_game_mode(INPUT_MODE);
     }
@@ -213,7 +212,7 @@ int main(void)
 
         if (pin_array.current_pin + 1 == LEVEL_SIZE)
         {
-          _delay_ms(500);
+          delay(200);
           change_game_mode(END_GAME_MODE);
           continue;
         }
@@ -224,12 +223,12 @@ int main(void)
           pin_array.pin_level++;
 
           change_game_mode(OUTPUT_MODE);
-          _delay_ms(400);
+          delay(400);
         }
         else
         {
           pin_array.current_pin++;
-          _delay_ms(300);
+          delay(300);
         }
       }
       else if (hasBeenPressed() && !getPinState(PIND, pin_array.A[pin_array.current_pin]))
@@ -247,7 +246,7 @@ int main(void)
       gameAnnihilator(&pin_array);
       change_game_mode(OUTPUT_MODE);
 
-      _delay_ms(1000);
+      delay(1000);
     }
 
     // set port

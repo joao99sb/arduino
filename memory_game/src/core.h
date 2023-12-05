@@ -1,3 +1,8 @@
+// CPU frequency in Hz
+#ifndef F_CPU
+#define F_CPU 1000000UL
+#endif
+
 // define um tipo de 8bits
 typedef unsigned int u8 __attribute__((__mode__(__QI__)));
 
@@ -36,3 +41,5 @@ void pinMode(volatile u8 *REG_DDRx, int PORTx, int MODE);
 void setPin(volatile u8 *REG_PORT, int PIN, int bit);
 
 u8 getPinState(volatile u8 *REG_PIN, int PIN);
+
+void delay(double ms);

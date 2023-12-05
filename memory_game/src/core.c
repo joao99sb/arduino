@@ -29,3 +29,14 @@ u8 getPinState(volatile u8 *REG_PIN, int PIN)
 {
   return *REG_PIN & (1 << PIN);
 }
+
+void delay(double ms)
+{
+
+  double tmp = ((F_CPU) / 2e5) * ms;
+
+  for (double i = 0; i < (tmp); i++)
+  {
+    asm volatile("nop");
+  }
+}

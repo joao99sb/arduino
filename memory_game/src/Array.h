@@ -14,6 +14,8 @@ typedef struct Array
   int next;
   int pin_level;
   int current_pin;
+
+  int *levels;
 } Array;
 
 void verifyArray(Array arr);
